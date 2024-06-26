@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.index.hide{
+    display: none;
+}
+
+.screen1.hide, .screen2.hide{
+    display: none;
+}
+
+:root{
+    font-size: 62.5%;
+}
+body{
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    font-size: 1.6rem;
+    display: grid;
+    place-items: center;
+
+    height: 100vh;
+
+    text-align: center;
+}
+
+h1, h2{
+    color: #34355B;
+
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+p{
+    color: #34355B;
+
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.screen1{
+    width: 42.8rem;
+    height: 42.4rem;
+
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+.screen1 h1{
+    margin-bottom: 1.7rem;
+}
+.screen1 p{
+    margin-bottom: 2.2rem;
+}
+
+.screen2{
+    display: flex;
+    gap: 1.7rem;
+    flex-direction: column;
+    align-items: center;
+
+    width: 42.8rem;
+
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+.screen2 .index{
+    padding: 1rem;
+
+    color: #000;
+
+    text-align: center;
+    font-family: "Dancing Script";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.screen2 img{
+    padding-block: 4.3rem;
+}
+
+.index{
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+}
+
+button{    
+    border-radius: 4px;
+    border: none;
+    padding: 1.6rem;
+
+    background: #FF9500;
+    color: #FFF;
+
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    width: 17.4rem;
+}
+
+button:hover{
+    background: #e98902;
+    cursor: pointer;
+    
+}
+
+.screen1 img:hover{
+    animation: tremer 0.5s infinite;
+
+}
+
+.screen2 .index{
+    animation: grow 1s ease-in-out;
+}
+
+@keyframes tremer {
+    0%, 100% { transform: translate(0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-2px, 0); }
+    20%, 40%, 60%, 80% { transform: translate(2px, 0); }
+}
+
+@keyframes grow {
+    0% {
+        transform: translateY(200%) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slide-up{
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+}
